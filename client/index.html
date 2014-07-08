@@ -1,18 +1,26 @@
 <html>
   <body>
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <form><input id='addVertexInput' type='text' placeholder='Press Enter to Input'>Add Vertex</input></form>
+        <form><input id='addEdgeInputA' type='text' placeholder='Enter'>Connect To</input><input id='addEdgeInputB' type='text'></input></form>
+        <div class='svgContainer'></div>
+        <div>Start generating graph by adding a vertex.  After you have two 
+            verteces, you can start connecting them together.</div>
+
     <script src="lib/underscore/underscore.js"></script>
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/backbone/backbone.js"></script>
     <script src="lib/d3/d3.min.js"></script>
 
-    <script src="dataStructures/BasicGraph.js"></script>
+    <script src="models/BasicGraph.js"></script>
 
     <script src="models/AppModel.js"></script>
     <script src="models/OptionModel.js"></script>
     <script src="models/AlgorithmOptionModel.js"></script>
     <script src="collections/OptionCollection.js"></script>
     <script src="collections/AlgorithmOptionCollection.js"></script>
+
+    <script src="views/BasicGraphView.js"></script>
 
     <script src="views/OptionView.js"></script>
     <script src="views/AlgorithmOptionView.js"></script>

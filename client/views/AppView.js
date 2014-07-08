@@ -9,29 +9,25 @@ var AppView = Backbone.View.extend({
     '<div class="post-container"></div>'),
 
   events: {
-    "click .normalGraph": function(){
-      this.model.set('currentAlgorithm', new NormalGraph());
-      //rendering n stuff
+    "click .basicGraph-button": function(){
+      $('.svgContainer').children().remove()
+      this.model.set('currentAlgorithm', new BasicGraph());
+      this.model.set("currentVisualization", new BasicGraphView());
+      this.render();
     },
 
-    "click .directedGraph": function(){
+    "click .directedGraph-button": function(){
+/*      $('.svgContainer').children().remove()
       this.model.set('currentAlgorithm', new DirectedGraph());
+      this.model.set("currentVisualization", new DirectedGraphView());
+      this.render();*/
     },
 
-
-/*    "click .stand-button": function(){
-      this.model.get('playerHand').stand()
-      this.$('.hit-button, .stand-button').addClass('disabled')
-    }
-
-    "click .new-game-button": function(){
-      this.model.newGame()
-      $('.hit-button, .stand-button').removeClass('disabled')
-      this.render()
-    }*/
   },
 
   initialize: function(){
+    this.model.set('currentAlgorithm', new BasicGraph());
+    this.model.set("currentVisualization", new BasicGraphView());
     this.optionsCollectionView = new OptionsCollectionView({
       collection: this.model.get("optionCollection")
     });
@@ -40,18 +36,12 @@ var AppView = Backbone.View.extend({
     });
 
     this.render()
-
-/*    this.model.on('gameOver', (win) ->
-        this.$('.game-status-container').text( if win then "YOU WIN" else "YOU LOSE" )
-        this.$('.new-game-button').removeClass('disabled')
-        this.$('.hit-button, .stand-button').addClass('disabled')
-      , this.)*/
   },
 
   render: function(){
     this.$el.children().detach()
     this.$el.html(this.template())
-  /*  this.$('.player-hand-container').html new HandView(collection: this.model.get 'playerHand').el
-    this.$('.dealer-hand-container').html new HandView(collection: this.model.get 'dealerHand').el*/
+    //this.$('.svgContainer').html(this.model.get('currentAlgorithm')).el
+    //this.$('.dealer-hand-container').html new HandView(collection: this.model.get 'dealerHand').el*/
   }
 });
