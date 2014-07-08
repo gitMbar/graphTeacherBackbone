@@ -12,6 +12,7 @@
   "dependencies": {
     "jquery": "latest",
     "backbone": "latest",
-    "d3": "latest"
+    "d3": "latest",
+    "bootstrap": "latest"
   }
 }
