@@ -1,0 +1,17 @@
+{
+  "name": "shortly-angular",
+  "version": "0.0.0",
+  "authors": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "backbone": "latest",
+    "d3": "latest"
+  }
+}

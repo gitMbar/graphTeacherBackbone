@@ -1,0 +1,16 @@
+{
+  "name": "graphTeacherBackbone",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "latest"
+  },
+  "dependencies": {
+  }
+}
