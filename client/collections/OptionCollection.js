@@ -1,1 +1,1 @@
-OptionCollection
+var OptionCollection = Backbone.Collection.extend({});

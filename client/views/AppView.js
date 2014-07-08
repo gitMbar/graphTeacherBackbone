@@ -3,7 +3,7 @@ var AppView = Backbone.View.extend({
   template: _.template(
     '<div class="optionsContainer"></div>' +
     '<div class="svgContainer"></div>' +
-    '<div class="algoorithmOptionsContainer"></div>' +
+    '<div class="algorithmOptionsContainer"></div>' +
     '<button class="basicGraph-button">Basic Graph</button>' + 
     '<button class="directedGraph-button">Directed Graph</button>' +
     '<div class="post-container"></div>'),
@@ -32,6 +32,13 @@ var AppView = Backbone.View.extend({
   },
 
   initialize: function(){
+    this.optionsCollectionView = new OptionsCollectionView({
+      collection: this.model.get("optionCollection")
+    });
+    this.algorithmOptionsCollectionView = new AlgorithmOptionsCollectionView({
+      collection: this.model.get("algorithmOptionCollection")
+    });
+
     this.render()
 
 /*    this.model.on('gameOver', (win) ->

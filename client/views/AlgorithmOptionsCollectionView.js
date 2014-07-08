@@ -1,1 +1,1 @@
-AlgorithmOptionsCollectionView.js
+var AlgorithmOptionsCollectionView = Backbone.View.extend({});
