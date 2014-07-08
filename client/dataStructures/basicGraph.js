@@ -1,15 +1,15 @@
-var Graph = function(){
+var BasicGraph = function(){
 	this.nodes = [];
 	this.links = [];
 };
 
-Graph.prototype.addVertex = function(vert){
+BasicGraph.prototype.addVertex = function(vert){
 	if (!this.contains(vert)){
 		this.nodes.push({"id": vert, "group": 1})
 	}
 };
 
-Graph.prototype.findIndex = function(vert){
+BasicGraph.prototype.findIndex = function(vert){
 	var index = -1;
 	for (var i = 0; i < this.nodes.length; i++){
 		if (this.nodes[i].id === vert) return i;
@@ -17,7 +17,7 @@ Graph.prototype.findIndex = function(vert){
 	return index;
 }
 
-Graph.prototype.addEdge = function(from, to){
+BasicGraph.prototype.addEdge = function(from, to){
 	if (!this.contains(from) || !this.contains(to)){
 		alert("Both vertices must exist!");
 	} else {
@@ -27,7 +27,7 @@ Graph.prototype.addEdge = function(from, to){
 	}
 };
 
-Graph.prototype.contains = function(vert){
+BasicGraph.prototype.contains = function(vert){
   var found = false;
   for (var i = 0; i < this.nodes.length; i++){
   	if (this.nodes[i].id === vert){

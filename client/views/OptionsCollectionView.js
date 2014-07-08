@@ -1,1 +1,1 @@
-OptionsCollectionView.js
+var OptionsCollectionView = Backbone.View.extend({});

@@ -1,1 +1,1 @@
-OptionsView.js
+var OptionsView = Backbone.View.extend({});

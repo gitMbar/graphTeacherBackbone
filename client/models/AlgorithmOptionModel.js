@@ -1,1 +1,1 @@
-AlgorithmOptionModel.js
+var AlgorithmOptionModel = Backbone.Model.extend({});
