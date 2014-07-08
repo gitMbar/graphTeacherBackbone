@@ -17,6 +17,7 @@ var BasicGraphView = Backbone.View.extend({
 		      .size([width, height]);
 
 		var svg = d3.select(".svgContainer").append("svg")
+			.attr("class", "col-md-12")
 		    .attr("width", width)
 		    .attr("height", height);
 
