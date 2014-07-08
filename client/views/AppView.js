@@ -1,11 +1,11 @@
 var AppView = Backbone.View.extend({
 
   template: _.template(
-    '<div class="optionsContainer"></div>' +
+    '<div class="optionsContainer container-fluid"><div class="row"></div></div>' +
     '<div class="svgContainer"></div>' +
-    '<div class="algorithmOptionsContainer"></div>' +
-    '<button class="basicGraph-button">Basic Graph</button>' + 
-    '<button class="directedGraph-button">Directed Graph</button>' +
+    '<div class="algorithmOptionsContainer container-fluid"><div class="row">' +
+    '<button id="main" class="basicGraph-button col-md-3">Basic Graph</button>' + 
+    '<button class="directedGraph-button col-md-3">Directed Graph</button></div></div>' +
     '<div class="post-container"></div>'),
 
   events: {

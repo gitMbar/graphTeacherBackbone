@@ -1,7 +1,5 @@
 <html>
   <body>
-    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
-     below them until after the scripts load-->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css" />
     <script src="lib/underscore/underscore.js"></script>
     <script src="lib/jquery/dist/jquery.min.js"></script>
@@ -23,38 +21,14 @@
     <script src="views/AppView.js"></script>
 
 <!--     <script>
-      $(function(){
-        // set up model objects
-        var library = new Songs(songData);
-        var app = new AppModel({library: library});
-
-        // build a view for the top level of the whole app
-        var appView = new AppView({model: app});
-
-        if (localStorage.length > 0){
-          _.each(localStorage, function(val, key){
-            if (library.get('c' + key)){
-              app.get('songQueue').add(library.get('c' + key));
-            }
-          });
-        }
-
-        // put the view onto the screen
-        $('#main').append(appView.render());
-        $('audio').before('<h1 class="category">AllieyaTunes</h1>');
-      });
+        $('blah').before('<h1 class="category">AllieyaTunes</h1>');
     </script> -->
 
     <script>
+        $(function(){
         var app = new AppModel({});
         var appView = new AppView({model: app}).$el.appendTo('body');
+        });
     </script>
-    <div class='container-fluid'>
-        <div class='row'>
-            <div class='col-md-3'></div>
-            <div id="main" class='col-md-6'></div>
-            <div class='col-md-3'></div>
-        </div>
-    </div>
   </body>
 </html>
