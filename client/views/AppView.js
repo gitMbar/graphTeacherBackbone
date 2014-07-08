@@ -11,16 +11,22 @@ var AppView = Backbone.View.extend({
   events: {
     "click .basicGraph-button": function(){
       $('.svgContainer').children().remove()
+      $("#addEdgeInputA").off();
+      $("#addEdgeInputB").off();
+      $("#addVertexInput").off();
       this.model.set('currentAlgorithm', new BasicGraph());
       this.model.set("currentVisualization", new BasicGraphView());
-      //this.render();
+      this.render();
     },
 
     "click .directedGraph-button": function(){
       $('.svgContainer').children().remove()
+      $("#addEdgeInputA").off();
+      $("#addEdgeInputB").off();
+      $("#addVertexInput").off();
       this.model.set('currentAlgorithm', new DirectedGraph());
       this.model.set("currentVisualization", new DirectedGraphView());
-      //this.render();
+      this.render();
     },
 
   },

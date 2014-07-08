@@ -1,8 +1,8 @@
 var DirectedGraphView = Backbone.View.extend({
-	model: BasicGraph,
+	model: DirectedGraph,
 
 	initialize: function(){
-		graph = new BasicGraph()
+		var graph = new DirectedGraph()
 
 		var width = 1200,
 		    height = 600;
@@ -65,16 +65,14 @@ var DirectedGraphView = Backbone.View.extend({
 		      .attr("dy", ".3em")
 		      .text(function(d) { return d.id; });
 
-		  //start links
-
-		// add the links and the arrows
+		// add the paths and the arrows
 		var path = svg.selectAll(".path")
 		    .data(force.links());
 		path
 		  .enter().append("path")
 		    .attr("class", function(d) { return "link " + d.type; })
 		    .attr("class", "path")
-		    //.attr("marker-end", "url(#end)");
+		    .attr("marker-end", "url(#end)");
 
 		path.exit().transition().duration(100).remove()
 		marker.exit().transition().duration(100).remove()
@@ -126,9 +124,9 @@ var DirectedGraphView = Backbone.View.extend({
 		        event.preventDefault();
 		        console.log('hisf')
 		        val = $(this).val();
-		          if (graph === undefined){
+/*		          if (graph === undefined){
 		            graph = new Graph();
-		          }
+		          }*/
 		          graph.addVertex(val);
 		          update();
 		        $(this).val("")
@@ -140,8 +138,8 @@ var DirectedGraphView = Backbone.View.extend({
 
 	},
 
-	render: function(){
+/*	render: function(){
 		return this;
-	}
+	}*/
 
 })

@@ -2,7 +2,7 @@ var BasicGraphView = Backbone.View.extend({
 	model: BasicGraph,
 
 	initialize: function(){
-		graph = new BasicGraph()
+		var graph = new BasicGraph()
 
 		var width = 1200,
 		    height = 600;
@@ -102,9 +102,9 @@ var BasicGraphView = Backbone.View.extend({
 		        event.preventDefault();
 		        console.log('hisf')
 		        val = $(this).val();
-		          if (graph === undefined){
+/*		          if (graph === undefined){
 		            graph = new Graph();
-		          }
+		          }*/
 		          graph.addVertex(val);
 		          update();
 		        $(this).val("")

@@ -23,7 +23,6 @@ DirectedGraph.prototype.addEdge = function(from, to){
 	} else {
 		fromIndex = this.findIndex(from);
 		toIndex = this.findIndex(to);
-		console.log(fromIndex + toIndex);
 		this.links.push({"source": fromIndex, "target": toIndex, "value": 10})
 	}
 };
