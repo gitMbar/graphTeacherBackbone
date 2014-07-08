@@ -8,13 +8,9 @@
     <script src="lib/backbone/backbone.js"></script>
     <script src="lib/d3/d3.min.js"></script>
 
-<!--     <script src="data/data.js"></script>
-
-    <script src="models/SongModel.js"></script>
-    <script src="collections/Songs.js"></script>>
     <script src="models/AppModel.js"></script>
 
-    <script src="views/view.js"></script> -->
+    <script src="views/AppView.js"></script>
 
 <!--     <script>
       $(function(){
@@ -38,6 +34,11 @@
         $('audio').before('<h1 class="category">AllieyaTunes</h1>');
       });
     </script> -->
+
+    <script>
+        var app = new AppModel({});
+        var appView = new AppView({model: app}).$el.appendTo('body');
+    </script>
     <div class='container-fluid'>
         <div class='row'>
             <div class='col-md-3'></div>
