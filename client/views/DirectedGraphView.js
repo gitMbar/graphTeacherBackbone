@@ -5,7 +5,7 @@ var DirectedGraphView = Backbone.View.extend({
 		var graph = new DirectedGraph()
 
 		var width = 1200,
-		    height = 600;
+		    height = 700;
 
 		var color = d3.scale.category20();
 
@@ -29,15 +29,15 @@ var DirectedGraphView = Backbone.View.extend({
 		var marker = svg.append("svg:defs").selectAll("marker")
 		    .data(["end"]);      // Different link/path types can be defined here
 		marker
-		  .enter().append("svg:marker")    // This section adds in the arrows
+		  .enter().append("marker")    // This section adds in the arrows
 		    .attr("id", String)
-		    .attr("viewBox", "0 -5 10 10")
+		    .attr("viewBox", "0 -9 10 10")
 		    .attr("refX", 15)
 		    .attr("refY", -1.5)
-		    .attr("markerWidth", 6)
-		    .attr("markerHeight", 6)
+		    .attr("markerWidth", 9)
+		    .attr("markerHeight", 8)
 		    .attr("orient", "auto")
-		  .append("svg:path")
+		  .append("path")
 		    .attr("d", "M0,-5L10,0L0,5");
 		//update with each vertex and edge
 		var update = function(){
@@ -54,7 +54,7 @@ var DirectedGraphView = Backbone.View.extend({
 		        .call(force.drag);
 		  nodeEnter.append("circle")
 		        .attr("class", "node")
-		        .attr("r", 17)
+		        .attr("r", 19)
 		        .style("stroke", "black")
 		        .style("fill", "lightblue")
 		        .call(force.drag);
@@ -100,7 +100,7 @@ var DirectedGraphView = Backbone.View.extend({
 		}
 
 		//only for testing.  No need to update blank graph
-		update()
+		update();
 
 		var addEdgeInput = function(){
 		 if(event.which == 13) {

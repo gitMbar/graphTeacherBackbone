@@ -5,7 +5,7 @@ var BasicGraphView = Backbone.View.extend({
 		var graph = new BasicGraph()
 
 		var width = 1200,
-		    height = 600;
+		    height = 700;
 
 		var color = d3.scale.category20();
 
@@ -14,6 +14,7 @@ var BasicGraphView = Backbone.View.extend({
 		      .links(graph.links)
 		      .charge(function(d){ return Math.max(((d.weight * -200)-500), -1500)})
 		      .linkDistance(90)
+		      .gravity(.08)
 		      .size([width, height]);
 
 		var svg = d3.select(".svgContainer").append("svg")
