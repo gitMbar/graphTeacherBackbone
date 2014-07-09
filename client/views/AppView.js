@@ -5,7 +5,9 @@ var AppView = Backbone.View.extend({
     '<div class="svgContainer"></div>' +
     '<div class="algorithmOptionsContainer container-fluid"><div class="row">' +
     '<button id="main" class="basicGraph-button col-md-3">Basic Graph</button>' + 
-    '<button class="directedGraph-button col-md-3">Directed Graph</button></div></div>' +
+    '<button class="directedGraph-button col-md-3">Directed Graph</button>' + 
+    '<button class="directedGraph-button col-md-3">Relationship Equilibrium Graph</button>' + 
+    '<button class="directedGraph-button col-md-3">Binary Tree</button></div></div>' +
     '<div class="post-container"></div>'),
 
   events: {

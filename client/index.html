@@ -2,8 +2,10 @@
   <body>
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-        <form><input id='addVertexInput' type='text' placeholder='Press Enter to Input'>Add Vertex</input></form>
-        <form><input id='addEdgeInputA' type='text' placeholder='Enter'>Connect To</input><input id='addEdgeInputB' type='text'></input></form>
+         <div class="optionsContainer container-fluid">
+        <div class="row"><form><input id='addVertexInput' class='col-md-1' type='text' placeholder='Press Enter to Input'>Add Vertex</input></form></div>
+        
+        <div class="row"><form><input id='addEdgeInputA' class='col-md-1' type='text' placeholder='Enter'>Connect To</input><input id='addEdgeInputB' type='text'></input></form></div></div>
         <div class='svgContainer'></div>
         <div>Start generating graph by adding a vertex.  After you have two 
             verteces, you can start connecting them together.</div>
